@@ -1,0 +1,471 @@
+---
+title: Early forecasting of delayed cerebral ischemia in the intensive care unit
+subtitle: This is a project proposal to be used as a template for subsequent documents, i.e. ethics proposal, grant applications, manuscript, master-proposal etc...
+author: 
+  - M. Murek
+  - I. Zubak
+  - M. Montalbetti
+  - T. Petutschnigg
+  - D. Berger
+  - G. Rätsch
+  - D. Bervini
+  - A. Raabe
+  - W. Z'Graggen
+date: today
+format: 
+  pdf:
+    documentclass: scrartcl
+    geometry: 
+    # https://en.wikibooks.org/wiki/LaTeX/Footnotes_and_Margin_Notes
+      - top=3cm
+      - bottom=3cm
+      - outer=7cm
+      - inner=2.5cm
+      - marginparwidth=5.5cm
+    include-in-header:
+      - resources/header.tex
+    mainfont: Libertinus Serif
+    fontsize: 11pt
+    papersize: a4
+    toc: true
+    number-sections: true
+bibliography: resources/references.bib
+csl: resources/nature.csl
+reference-location: margin
+---
+
+# Background
+
+
+## Subarachnoidal Hemorrhage
+Subarachnoid haemorrhage (SAH) represents a critical medical emergency
+triggered by the bursting of an aneurysm
+within the brain's cerebral arteries (@fig-rupture).
+This condition,
+with an incidence of 10 per 100,000 individuals per year,
+predominantly impacts those between 40 and 60 years old
+[@connollyGuidelinesManagementAneurysmal2012].
+
+![Rupture of a cerebral aneurysm resulting in increased intracranial pressure[@nchk].](figures/aneurysm-rupture.jpg){#fig-rupture}
+
+When an aneurysm ruptures,
+arterial blood is rapidly propelled into the subarachnoid space,
+which is located around the brain
+and is filled with cerebrospinal fluid.
+This sudden influx of blood
+under high pressure
+leads to the condition known as SAH (@fig-sah).
+
+![Subarachnoid hemorrhage. The escaping blood fills the space at the base of the skull and around the cerebral vessels[@nchk].](figures/sah.jpg){#fig-sah}
+
+The main symptom is a sudden,
+severe and extremely painful headache
+also known as thunderclap headache.
+The pain can be felt throughout the head
+and can radiate to the neck and back.
+In severe cases,
+unconsciousness or a seizure may occur
+only seconds later. 
+In addition,
+there may be variable neurological symptoms
+such as speech disorders, paralysis, sensory disturbances and double vision.
+
+
+## Cerebral Vasospasm
+After aneurysm treatment,
+our patients are subject to intensive monitoring 
+in either the intensive care unit (ICU)
+or the neurosurgical intermediate care unit (IMC)
+for a length of 14 days.
+During this two-week period,
+patients are cautiously monitored
+due to a possible insidious contraction of cerebral arteries,
+caused by blood residues
+within the subarachnoid space.
+This pathological process,
+referred to as cerebral vasospasm (CVS),
+typically arises about 3 to 14 days after the bleeding (@fig-sah-onset).
+It occurs in approximately one-third of SAH patients
+[@thomasIncidenceCerebralVasospasm2020]
+and carries the risk of further neurological complications.
+
+![Estimated hazard function for the development of cerebral vasospasm.[@kellyConditionalVasospasmFreeSurvival2022]](figures/sah-onset.png){#fig-sah-onset}
+
+![In a microsurgical operation, the ruptured aneurysm is closed with the help of a clip (left). A few days after surgical closure of the aneurysm, there may be a constriction of the large cerebral vessels, a so called cerebral vasospasm (right)[@nchk].](figures/vasospasm.jpg){#fig-vasospasm}
+
+The contraction of cerebral vessels during CVS
+affects the normal cerebral perfusion,
+the process by which oxygenated blood is delivered to brain tissues (@fig-vasospasm).
+A critical reduction in cerebral perfusion
+can push brain tissues into a 'state of risk',
+where they struggle to function due to insufficient oxygen supply.
+
+
+## Cerebral Blood Flow
+### Energy Budget
+Despite the brain constituting merely 2% of total body weight,
+it remarkably accounts for roughly 20% of the body's energy consumption
+[@raichleAppraisingBrainEnergy2002].
+This disproportionate energy consumption
+is a reflection of the brain's complex and ceaseless activity,
+for which a continuous supply of oxygen and glucose is crucial.
+Normal cerebral blood flow,
+which ensure this energy demand is met,
+typically registers at approximately 50ml per 100g of brain tissue per minute.
+[@ketyNITROUSOXIDEMETHOD1948, @madsenAverageBloodFlow1993]
+
+### CBF Autoregulation
+A stable Cerebral Blood Flow (CBF) is essential
+for the brain to function correctly.
+To achieve this,
+the brain uses a mechanism called cerebral autoregulation
+[@lassenCerebralBloodFlow1959].
+This mechanism keeps CBF steady,
+even when there are short-term changes in systemic blood pressure.
+In healthy individuals,
+it works optimally
+when the systemic mean arterial pressure (MAP)
+is between 60 and 160 mmHg.
+Cerebral autoregulation adjusts the resistance
+in small cerebral arteries to manage CBF.
+For example, when MAP goes down,
+these arteries respond by dilating to decrease resistance
+and keep CBF stable, as shown in @fig-autoregulation. 
+A disrupted cerebral autoregulation is an important aspect
+of SAH-induced brain injury[@lidingtonCerebralAutoregulationSubarachnoid2021, @armsteadCerebralBloodFlow2016].
+
+![This figure illustrates the relationship between cerebral blood flow (CBF) and mean arterial pressure (MAP) in cerebral autoregulation. It defines a range where CBF stays stable despite MAP changes. If MAP drops below this range, perfusion reduces, but symptoms aren't visible until a critical threshold is crossed. This symptom-free zone is called the cerebrovascular reserve capacity. Below this capacity, hypoperfusion and ischemia occur, and above the upper limit, hyperperfusion and edema occur[@lidingtonCerebralAutoregulationSubarachnoid2021].](figures/autoregulation.jpg){#fig-autoregulation}
+
+### The influence of vessel diameter on cerebral blood flow
+- critical perfusion with reversible and irreversible thresholds
+- hagen poiseuille equation
+- refer to hp variables and treatment options
+- refer to image CVS progression
+
+A progressive reduction in vessel diameter 
+as occuring in vasospasm after SAH
+leads to a diminishing CBF
+and therefore a stepwise reduction of brain function.
+According to the vessel diameter reduction 
+this process can vary 
+from an asymptomatic CBF reduction
+to reversible brain function distortion 
+and in severe cases leads to irreversible brain demage 
+via neuronal death (see @fig-thresholds).
+
+## Delayed Cerebral Ischemia [^1]
+[^1]: Include image-grid of cvs-progression,
+normal and with deficite/ischemia.
+
+Progressive CVS can transition from a 'state of risk' 
+into Delayed Cerebral Ischemia (DCI),
+a severe neurological complication
+that arises in 10-20% of SAH patients,
+potentially leading to permanent brain damage or death
+[@thomasIncidenceCerebralVasospasm2020].
+DCI occurs when the diminished blood supply to the brain
+reaches a critical level (ischemia),
+leading to insufficient oxygen supply
+to the brain tissue.
+The treatment strategies for CVS
+typically revolve around
+improving cerebral blood flow,
+utilizing medical, endovascular, or surgical interventions
+[@connollyGuidelinesManagementAneurysmal2012].
+Tragically,
+despite all therapeutic efforts,
+around 35% of SAH patients die within three months,
+and over 50% of survivors experience an incomplete recovery
+[@andersenCoreOutcomesSubarachnoid2019].
+
+![Ischemic thresholds based on Cerebral Blood FLow (CBF) with a) levels for reversible (ischemia) and irreversible (infarction) brain function distortion and b) depiction of the time based component. Images adapted from Astrup et al. [@astrupCorticalEvokedPotential1977] and Jones at al.[@jonesThresholdsFocalCerebral1981]](figures/ischemic-thresholds.png){#fig-thresholds}
+
+
+## Diagnostic Challenges
+DCI is a complex condition 
+that requires careful attention 
+and continuous monitoring 
+to diagnose and treat effectively.
+It presents multiple challenges
+for medical professionals.
+
+__Delayed Onset__:
+DCI typically occurs several days after a SAH,
+meaning that patients may have recovered well
+from the initial bleeding.
+This creates an erroneous impression of safety
+for patients and caretakers
+by the time sudden, often insidious symptoms appear.
+
+__Silent Vasospasm__:
+In some cases,
+DCI may not cause any apparent symptoms
+and be hard to measure,
+especially in comatose, intubated patients.
+This is particularly challenging
+because it might not be detected
+until significant brain damage has already occurred.
+
+__Fluctuating Course__:
+The severity and location of the DCI can change rapidly,
+which means continuous monitoring is necessary
+for accurate diagnosis and management.
+
+__Symptom Overlap__:
+The symptoms of DCI,
+such as confusion, weakness of a limb, and difficulty speaking,
+are common to other neurological conditions
+like delirium, epilepsy and critical illness polyneuropathy,
+which can make accurate diagnosis difficult.
+
+
+# Aim/Objective
+In light of the intricate challenges 
+surrounding the diagnosis and management of DCI following SAH,
+the paramount objective of this project
+is to develop and integrate 
+a reliable early warning system.
+This machine learning (ML) based system
+aims at early identifying SAH patients
+who are at an imminent risk 
+of manifesting symptomatic DCI.
+
+By realizing this aim,
+we aspire to substantially reduce
+the devastating neurological consequences of SAH patients
+due to progressive or undiagnosed DCI,
+ensuring that they receive timely attention and treatment.
+
+
+
+# Methods
+## Data Collection and Selection
+The Inselspital Intensive Care Unit (ICU)
+and Intermediate Care Unit (IMC)
+see approximately 90 to 100 SAH patients per year.
+Over the span of a decade, 
+the Patient Data Management System (PDMS)
+has gathered medical records 
+for 800-1200 cases of subarachnoid hemorrhages,
+about 300 of which involve DCI.
+These figures form the basis of our data pool.
+It should be noted that these cases,
+while already known in clinical practice,
+will necessitate a manual review
+and detailed annotation for their identification.
+
+
+## Annotation
+Crucial to the data preparation phase
+is the annotation of exact timing of DCI
+and initial symptoms.
+This will involve a careful and detailed review
+of each patient's medical records
+to accurately pinpoint these specific events.
+The objective is to build a rich,
+annotated dataset
+that can be fed into the ML algorithm
+for pattern detection and predictive modeling.
+
+
+## Definition of a DCI Event [^4]
+[^4]: Refer to cvs-progression figure 
+and pinpoint timepoint of DCI event that needs to be predicted.
+
+A DCI event in this study is defined by the following criteria: 
+
+1. Aneurysmal SAH as shown by CT or MRI.
+   
+2. The emergence of, one of the below,
+new neurological deficits such as:
+- Aphasia
+- Motor weakness
+- Hypoesthesia
+- New agitation or drowsiness (measured by the RASS score ±2)
+- Change in consciousness (measured by the Glasgow Coma Scale ±2)
+  
+3. Vasospasms and/or
+an new cerebral perfusion deficit 
+in the affected brain area shown by:
+- CT-Perfusion 
+- MR-Perfusion
+- Digital Subtraction Angiography (vasospasms)
+
+
+## Role of the Data Science Student
+A key player in the implementation of this project
+will be a Master's student in data science.
+His role will comprise
+assisting in the annotation of patient data
+and developing the ML methodology
+to define and predict DCI onset.
+
+
+## Development of Predictive Model [^2]  
+[^2]:More input on that from Gunnar and the Student.
+
+Building on the data science student's work,
+the team will create a predictive model.
+This model will be informed by
+clinical and physiological variables
+as well as imaging parameters
+extracted from clinical records
+to predict the onset of DCI. 
+
+
+## Supervisory Expertise [^3]  
+[^3]:Mention role of all authors/supervisors,
+refer to CRediT statement/table
+and cite exemplary works related to project.
+
+Guiding this project will be 
+the experience and expertise of the contributors, 
+who bring valuable knowledge from SAH and ML research
+[@hylandEarlyPredictionCirculatory2020].
+Their guidance will be instrumental in
+providing the project with 
+a strong foundation and understanding
+of the underlying pathology as well as
+skills in data preparation, organization, and evaluation processes.
+
+
+
+# Clinical Significance
+At Inselspital,
+patients with SAH
+are cared for by an interdisciplinary,
+highly specialized team
+from the University Departments of Neurosurgery,
+Neuroradiology and Intensive Care Medicine.
+The optimal treatment of aneurysms
+as well as the therapy of DCI
+are among the major focus areas at our hospital. 
+
+The creation of an early warning system for DCI
+carries substantial clinical implications
+for the following reasons:
+
+__Improve patient outcomes__:
+With an early detection mechanism,
+there's a greater window for medical interventions,
+thereby potentially reducing
+the severe complications or fatalities associated with DCI.
+
+__Improve management of comatose patients__:
+For patients in a coma,
+typical symptomatic DCI may not be noticeable.
+An early detection system
+could monitor physiological parameters
+that might indicate the onset of DCI,
+improving care and outcomes for these patients.
+
+__Reduce monitoring burden__:
+With an early detection system,
+the burden of continuous
+and intense monitoring of each patient for signs of DCI
+can be reduced,
+making it less likely
+for warning signs to be missed
+due to human error, fatigue, or oversight.
+
+__Streamline resources:__ 
+Continuous monitoring can be resource-intensive.
+An early warning system
+can help prioritize patients
+who need the most attention,
+ensuring that resources are efficiently allocated.
+
+__Educate and Inform:__ 
+A profound understanding of the indicators preceding DCI
+could pave the way for discovering as-yet-unknown parameters
+and their complex interactions
+in the onset and progression of the condition.
+This could significantly augment the existing body of knowledge,
+providing invaluable insights for future research.
+
+
+
+# Ethical Considerations
+Given the sensitive nature
+of the data involved in this project
+and its potential implications for patient care,
+it is essential to underscore
+that this endeavor must be preceded
+by a thorough ethical review.
+
+Firstly,
+confidentiality and privacy issues will be addressed,
+considering that the data to be used for this study
+come from real-world clinical cases.
+All data will be anonymized,
+and the project will adhere strictly
+to data protection regulations.
+
+Secondly,
+in conducting the research and developing this system,
+it's vital to take into account
+any potential biases in the data used.
+This includes a possible bias in the selection of data,
+the risk of overfitting or underfitting the predictive models,
+or the inclusion of irrelevant or misleading variables.
+Any of these could potentially skew the model's results
+and subsequently impact patient care.
+
+Thirdly,
+when implementing the ML-based early warning system,
+there should be a clear understanding
+of how the system's outputs will be utilized
+and communicated within a clinical setting.
+It is critical to ensure
+that these tools do not override clinician judgment,
+but rather, complement it,
+as the nuances of patient care
+can often extend beyond algorithmic interpretation.
+Furthermore, the system should be designed and used in a way
+that avoids creating undue anxiety
+or false alarms among healthcare professionals and patients.
+
+Lastly,
+considering the serious consequences of DCI,
+including severe neurological damage and death,
+it's essential to ensure
+that this project does not inadvertently elevate the risk to patients,
+either by instilling an overreliance on the system
+or by distracting from other critical elements of patient care.
+
+In sum,
+while the development of an early warning system for DCI
+carries immense potential benefits,
+it must be balanced against ethical considerations.
+Prior to proceeding with this research,
+a comprehensive ethical review will be conducted,
+and the necessary approval obtained.
+
+
+
+# Summary
+This study proposes
+an early warning system using ML
+to predict symptomatic DCI in subarachnoid hemorrhage (SAH) patients
+managed in ICUs or IMCs.
+CVS, a contraction of cerebral vessels post SAH,
+risks severe neurological complications,
+including permanent brain demage and death.
+Because DCI symptoms are common to many neurological conditions,
+appear days after SAH,
+and vary in severity and location,
+early detection is challenging but critical.
+The system would leverage
+a decade's worth of data
+from the Patient Data Management System (PDMS) at Inselspital Bern,
+with a data science student
+helping annotate and develop a predictive model.
+This tool promises timely intervention,
+improved patient prognosis,
+efficient patient management,
+and reduced monitoring burdens.
+
+
+{{< pagebreak >}}
+
+# References
