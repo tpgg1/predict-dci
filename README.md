@@ -176,7 +176,7 @@ check out the short introduction below.
    Then, open your terminal and run:
 
 ```bash
-git clone https://github.com/your-username/project-name.git
+git clone https://github.com/murek-m/predict-dci.git
 ```
 
 2. **Create a New Branch**:
@@ -184,7 +184,8 @@ git clone https://github.com/your-username/project-name.git
    and create a new branch:
 
 ```bash
-cd project-name git checkout -b new-feature
+cd predict-dci 
+git checkout -b new-feature
 ```
 
 3. **Make Your Changes**:
