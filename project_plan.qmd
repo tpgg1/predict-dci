@@ -152,6 +152,8 @@ from an asymptomatic CBF reduction
 to reversible brain function distortion 
 and in severe cases leads to irreversible brain demage 
 via neuronal death (see @fig-thresholds).
+test edit. 
+bla bla bla.
 
 ## Delayed Cerebral Ischemia [^1]
 [^1]: Include image-grid of cvs-progression,
